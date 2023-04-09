@@ -1,51 +1,60 @@
-#include<iostream>
-#include<stdlib.h>
+#include <iostream>
+#include <cmath>
 using namespace std;
+int main()
+{
+    int h, w1, w2;
+a:
+    cout << "Enter height: ";
+    cin >> h; // h - total horizontal row
 
-int main(){
-	int n;
-	cout<<"enter n:";   // you can try with 8 
-	cin>>n;
-	if(n<=0){
-		exit(0);
-	}
-  for(int i=0;i<n;i++){
-    for(int j=0;j<=i;j++){
-      cout<<char(j+65);
+    if (h >= 1 && h % 2 == 0)
+    {
+        w1 = h / 2;  // w1 - number of column of 1st inner loop
+        w2 = w1 - 1; // w2 - number of column of 2nd inner loop
     }
-    for(int k=n;k>i;k--){
-      cout<<"  "; 
+    else if (h >= 1 && h % 2 != 0)
+    {
+        w1 = h / 2 + 1;
+        w2 = w1 - 1;
     }
-    for(int m=i;m>=0;m--){
-      cout<<char(m+65);
+    else
+    {
+        cout << "You have entered an invalid size. Please enter a positive integer!" << endl;
+        goto a;
     }
-    cout<<endl;
-    if(i==n-1){
 
-    for(int k=0;k<n;k++){
-      cout<<char(k+65);
+    int x = 65;
+    for (int i = 1; i <= h; ++i)
+    {
+        for (int j = 1; j <= w1; ++j)
+        {
+            if (i >= j && i + j <= 2 * w1)
+            {
+                if (i == w1 && j == w1)
+                {
+                    cout << " " << (char)(x + 1);
+                }
+                else
+                    cout << " " << (char)(x);
+            }
+
+            else
+                cout << "  ";
+            ++x;
+        }
+        x = 65 + w2 - 1;
+        for (int j = 1; j <= w2; ++j)
+        {
+            if (i + j >= w1 && i - j <= w1)
+                cout << " " << (char)(x);
+            else
+                cout << "  ";
+            --x;
+        }
+
+        x = 65;
+        cout << endl;
     }
-    for(int k=n+1;k>=0;k--){
-    	if(k==(n)){
-			continue;
-		}
-      cout<<char(k+65);
-    }
-    cout<<endl;
-	}
-  }
-  
-  for(int i=0;i<n;i++){
-    for(int j=0;j<n-i;j++){
-      cout<<char(j+65);
-    }
-    for(int k=0;k<=i;k++){
-      cout<<"  ";
-    }
-    for(int m=(n-1)-i;m>=0;m--){
-      cout<<char(m+65);
-    }
-    cout<<endl;
-  }
-  return 0;
+    return 0;
 }
