@@ -5,10 +5,15 @@ int main()
 {
   int n;
 a:
-  cout << "Enter the size: ";
+  cout << "Enter the size of the pattern: ";
   cin >> n;
+  
+  cout<<"\n*** THE SHAPE OF YOUR PATTERN IS ***\n";
+  cout<<"-------------------------------------\n\n";
+  
   if (n <= 0)
   {
+    cout<<"You entered invalid size.Please enter a positive integer!\n";
     goto a;
   }
   for (int i = 0; i < n / 2; i++)
