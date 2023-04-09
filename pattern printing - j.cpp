@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int h, w1, w2;
-a:
+    enterAgain:
     cout << "Enter the number of row of the pattern: ";
     cin >> h;   // h - total horizontal row
     
@@ -13,8 +13,8 @@ a:
     
     if (h >= 1 && h % 2 == 0)
     {
-        w1 = h / 2;  // w1 - number of column of first inner loop
-        w2 = w1 - 1; // w2 - number of column of second inner loop
+        w1 = h / 2;  // w1 - number of column of first inner loop (left side triangle)
+        w2 = w1 - 1; // w2 - number of column of second inner loop (right side triangle excluding the initial point)
     }
     else if ((h >= 1) && (h % 2 != 0))
     {
@@ -24,7 +24,7 @@ a:
     else
     {
         cout << "You have entered an invalid size. Please enter a positive integer!" << endl;
-        goto a;
+        goto enterAgain;
     }
 
     int x = 65;
