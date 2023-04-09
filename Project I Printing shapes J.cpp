@@ -30,7 +30,15 @@ a:
         for (int j = 1; j <= w1; ++j)
         {
             if (i >= j && i + j <= 2 * w1)
-                cout << " " << (char)(x);
+            {
+                if (i == w1 && j == w1)
+                {
+                    cout << " " << (char)(x + 1);
+                }
+                else
+                    cout << " " << (char)(x);
+            }
+
             else
                 cout << "  ";
             ++x;
