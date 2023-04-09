@@ -20,7 +20,7 @@ int main()
             {
                 if (pow(*side1, 2) + pow(*side2, 2) == pow(*hyp, 2))
                 {
-                    cout << setw(5) << *side1 << '\t' << setw(5) << *side2 << '\t' << setw(5) << *hyp;
+                    cout << setw(5) << *side1 << '\t' << setw(5) << *side2 << '\t' << setw(5) << *hyp;  //setw()- used this function to get formatted output from the oimanip library
                     cout << endl;
                 }
             }
