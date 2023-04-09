@@ -28,7 +28,7 @@ int main()
     }
     return 0;
 }
-// without pointer we can do it like this
+// without pointer
 /*
 #include <iostream>
 #include<cmath>
