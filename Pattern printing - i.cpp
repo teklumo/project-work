@@ -6,7 +6,7 @@ int main()
     int h, h1, h2;
     enterAgain:
     cout << "Enter the height: ";
-    cin >> h; // h- total vertical columns
+    cin >> h; // h- total number of rows
 
     if (h >= 1 && h % 2 == 0)
     {
