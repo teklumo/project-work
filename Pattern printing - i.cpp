@@ -4,14 +4,14 @@ using namespace std;
 int main()
 {
     int h, h1, h2;
-a:
+    enterAgain:
     cout << "Enter the height: ";
     cin >> h; // h- total vertical columns
 
     if (h >= 1 && h % 2 == 0)
     {
-        h1 = h / 2;  // h1 - number of rows for the upper & upside down triangle
-        h2 = h1 - 1; // h2 - number of rows for the lower triangle (excluding the peak)
+        h1 = h / 2;  // h1 - number of rows for the upper (upside down) triangle.
+        h2 = h1 - 1; // h2 - number of rows for the lower triangle excluding the peak.
     }
     else if (h >= 1 && h % 2 != 0)
     {
@@ -21,7 +21,7 @@ a:
     else
     {
         cout << "You have entered an invalid size. Please enter a positive integer!" << endl;
-        goto a;
+        goto enterAgain;
     }
 
     int x = 65;
