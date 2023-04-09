@@ -4,46 +4,32 @@ using namespace std;
 
 int main(){
 	int n;
-	cout<<"enter n:";   // you can try with 8 
+	cout << "Enter the size: ";
 	cin>>n;
 	if(n<=0){
 		exit(0);
 	}
-  for(int i=0;i<n;i++){
-    for(int j=0;j<=i;j++){
-      cout<<char(j+65);
-    }
-    for(int k=n;k>i;k--){
-      cout<<"  "; 
-    }
-    for(int m=i;m>=0;m--){
-      cout<<char(m+65);
-    }
-    cout<<endl;
-    if(i==n-1){
-
-    for(int k=0;k<n;k++){
-      cout<<char(k+65);
-    }
-    for(int k=n+1;k>=0;k--){
-    	if(k==(n)){
-			continue;
-		}
-      cout<<char(k+65);
-    }
-    cout<<endl;
-	}
-  }
-  
-  for(int i=0;i<n;i++){
-    for(int j=0;j<n-i;j++){
-      cout<<char(j+65);
-    }
-    for(int k=0;k<=i;k++){
+  for(int i=0;i<n/2;i++){
+    for(int k=0;k<i;k++){
       cout<<"  ";
     }
-    for(int m=(n-1)-i;m>=0;m--){
-      cout<<char(m+65);
+    for(int j=((n/2)-1)-i;j>=0;j--){
+      cout<<char(j+65)<<" ";
+    }
+    for(int m=1;m<(n/2)-i;m++){
+      cout<<char(m+65)<<" ";
+    }
+    cout<<endl;
+  }
+  for(int i=0;i<((n/2)-1);i++){
+    for(int k=((n/2)-2)-i;k>0;k--){
+      cout<<"  ";
+    }
+    for(int j=i+1;j>=0;j--){
+      cout<<char(j+65)<<" ";
+    }
+    for(int m=1;m<=i+1;m++){
+      cout<<char(m+65)<<" ";
     }
     cout<<endl;
   }
