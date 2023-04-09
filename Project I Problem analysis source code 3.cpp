@@ -7,9 +7,9 @@ int main()
     cout << "Side1" << '\t' << "Side2" << '\t' << "Hypot" << endl;
     int coun = 0;
     int i, j, k;
-    int *side1, *side2, *hyp; // side 1 - i
-    side1 = &i;               // side 2 - j
-    side2 = &j;               // hypotenuse - k
+    int *side1, *side2, *hyp; // i- the value of side 1
+    side1 = &i;               // j- the value of side 2
+    side2 = &j;               // k- the value of hypotenuse
     hyp = &k;
 
     for (i = 1; i <= 100; ++i)
