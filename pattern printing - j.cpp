@@ -5,17 +5,19 @@ int main()
 {
     int h, w1, w2;
 a:
-    cout << "Enter height: ";
-    cin >> h; // h - total horizontal row
-
+    cout << "Enter the number of row of the pattern: ";
+    cin >> h;   // h - total horizontal row
+    
+    cout<<"*** THE SHAPE OF YOUR PATTERN IS ***\n\n";
+    
     if (h >= 1 && h % 2 == 0)
     {
-        w1 = h / 2;  // w1 - number of column of 1st inner loop
-        w2 = w1 - 1; // w2 - number of column of 2nd inner loop
+        w1 = h / 2;  // w1 - number of column of first inner loop
+        w2 = w1 - 1; // w2 - number of column of second inner loop
     }
-    else if (h >= 1 && h % 2 != 0)
+    else if ((h >= 1) && (h % 2 != 0))
     {
-        w1 = h / 2 + 1;
+        w1 = (h / 2) + 1;
         w2 = w1 - 1;
     }
     else
@@ -29,9 +31,9 @@ a:
     {
         for (int j = 1; j <= w1; ++j)
         {
-            if (i >= j && i + j <= 2 * w1)
+            if ((i >= j) && (i + j <= 2 * w1))
             {
-                if (i == w1 && j == w1)
+                if ((i == w1) && (j == w1))
                 {
                     cout << " " << (char)(x + 1);
                 }
