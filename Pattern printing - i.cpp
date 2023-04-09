@@ -107,3 +107,68 @@ a:
     return 0;
 }
 */
+
+
+//thrid method of implementation
+/*
+#include<iostream>
+using namespace std;
+int main(){
+int i,j,k,n;
+cout<<"Enter the number of column of the pattern : ";
+cin>>n;
+//If n is even number of column and number of row are 'n-1'
+//If n is odd number of column and number of row are 'n-2'
+cout<<"\n*** THE SHAPE OF YOUR PATTERN IS ***\n";
+cout<<"----------------------------------\n\n";
+for(i=1;i<n/2;i++)
+{
+	for(j=1;j<i;j++)
+	{
+		cout<<"  ";
+	}
+	char ch='A';
+	for(j=1;j<=(n/2)-i;j++)
+    {
+        ch++;
+    }
+
+	for(k=1;k<=(n/2)-i;k++)
+	{
+		cout<<" "<<ch;
+		ch--;
+	}
+    for(k=0;k<=(n/2)-i;k++)
+	{
+		cout<<" "<<ch;
+		ch++;
+	}
+	cout<<endl;
+}
+
+for(i=1;i<=(n/2);i++)
+{
+	for(j=1;j<=(n/2)-i;j++)
+	{
+		cout<<"  ";
+	}
+	char ch='A';
+	for(j=1;j<i;j++)
+    {
+        ch++;
+    }
+
+	for(k=1;k<i;k++)
+	{
+		cout<<" "<<ch;
+		ch--;
+	}
+	for(k=1;k<=i;k++)
+	{
+		cout<<" "<<ch;
+		ch++;
+	}
+	cout<<endl;
+}
+ }
+*/
