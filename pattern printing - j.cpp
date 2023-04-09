@@ -8,7 +8,8 @@ a:
     cout << "Enter the number of row of the pattern: ";
     cin >> h;   // h - total horizontal row
     
-    cout<<"*** THE SHAPE OF YOUR PATTERN IS ***\n\n";
+    cout<<"*** THE SHAPE OF YOUR PATTERN IS ***\n";
+    cout<<"---------------------------------\n\n";
     
     if (h >= 1 && h % 2 == 0)
     {
