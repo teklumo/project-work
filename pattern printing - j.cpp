@@ -10,7 +10,7 @@ a:
 
     if (h >= 1 && h % 2 == 0)
     {
-        w1 = h / 2;  // w1 - number of column of 1st inner loop
+        w1 = h / 2;  // 
         w2 = w1 - 1; // w2 - number of column of 2nd inner loop
     }
     else if (h >= 1 && h % 2 != 0)
