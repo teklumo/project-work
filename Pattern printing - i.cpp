@@ -1,13 +1,13 @@
 #include<iostream>
-#include<stdlib.h>
 using namespace std;
 
 int main(){
 	int n;
-	cout << "Enter the size: ";
+	a:
+  cout << "Enter the size: ";
 	cin>>n;
 	if(n<=0){
-		exit(0);
+		goto a;
 	}
   for(int i=0;i<n/2;i++){
     for(int k=0;k<i;k++){
